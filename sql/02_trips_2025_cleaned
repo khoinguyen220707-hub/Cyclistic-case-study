@@ -1,0 +1,20 @@
+	CREATE OR REPLACE TABLE `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_cleaned` AS
+SELECT *,
+  FORMAT_TIME('%H:%M:%S', TIME(TIMESTAMP_SECONDS(TIMESTAMP_DIFF(ended_at,started_at,SECOND)))) AS ride_length,
+  EXTRACT(DAYOFWEEK FROM started_at) AS day_of_week
+FROM(
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_01` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_02` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_03` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_04` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_05` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_06` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_07` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_08` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_09` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_10` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_11` UNION ALL
+  SELECT * FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_12`
+)
+WHERE TIMESTAMP_DIFF(ended_at,started_at,SECOND) >60
+AND TIMESTAMP_DIFF(ended_at, started_at, HOUR)<24;
