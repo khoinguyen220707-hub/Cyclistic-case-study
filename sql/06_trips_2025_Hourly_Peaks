@@ -1,0 +1,10 @@
+CREATE OR REPLACE TABLE `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_Hourly_Peaks` AS
+(
+SELECT
+  EXTRACT(HOUR FROM started_at)as Hour,
+  rideable_type,
+  member_casual,
+  COUNT(*) AS total_rides
+FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_cleaned`
+GROUP BY Hour,member_casual,rideable_type
+)
