@@ -1,0 +1,12 @@
+CREATE OR REPLACE TABLE `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_Geographic_distribution` AS
+(
+SELECT
+  member_casual,
+  start_station_name,
+  ROUND((start_lat),3) as latitude,
+  ROUND((start_lng),3) as longitude,
+  COUNT(*)AS total_rides
+FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_cleaned`
+WHERE start_station_name IS NOT NULL
+AND start_lat IS NOT NULL
+GROUP BY member_casual, start_station_name,end_station_name,latitude,longitude
