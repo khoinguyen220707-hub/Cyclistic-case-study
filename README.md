@@ -79,6 +79,8 @@ The data set consists of historical trip data from Cyclistic, made by Motivate I
 * **Design Philosophy:** Applied "Data-to-Ink Ratio" principles to ensure clarity and focus on key trends
 * **Visual storytelling:** Displayed all the findings and insights in a structured and logical way through **Microsoft PowerPoint**
 * **Dashboard Link:**
+ * **Temporal Analysis:** https://public.tableau.com/app/profile/nguyen.mai4551/vizzes
+ * **Geographic Analysis:** https://public.tableau.com/app/profile/nguyen.mai4551/viz/Book2_17700077149760/Sheet1
 ### 6. Act
 1. **Weekend Membership Plan:** Launch a "Weekend-Only" membership tier or a "Summer Pass" specifically targeting casual riders who follow these patterns
 2. **Strategic Trial Campaign:** Focus and promote digital marketing of  efforts, especially near recreational areas and tourist attractions most frequented by casual riders
@@ -104,4 +106,4 @@ I am always open to discussing Data Analytics, networking, or internship opportu
 * **LinkedIn:** https://www.linkedin.com/in/nguyen-mai-195870395/
 * **Interactive Portfolio:**
 * **Email:** khoinguyen220707@gmail.com
-* **Tableau Public:**
+* **Tableau Public:** https://public.tableau.com/app/profile/nguyen.mai4551/vizzes
