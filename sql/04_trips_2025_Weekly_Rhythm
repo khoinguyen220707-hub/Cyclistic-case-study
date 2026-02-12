@@ -1,0 +1,13 @@
+CREATE OR REPLACE TABLE `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_Weekly_Rhythm` AS
+(
+SELECT
+  day_of_week,
+  member_casual,
+  rideable_type,
+  COUNT(*) AS total_rides,
+  ROUND(AVG(TIMESTAMP_DIFF(ended_at, started_at, SECOND)/60), 2) AS mean_length
+FROM `first-case-study-485421.cyclistic_tripdata_2025.trips_2025_cleaned`
+GROUP BY day_of_week,member_casual,rideable_type
+ORDER By day_of_week, mean_length
+)
+
